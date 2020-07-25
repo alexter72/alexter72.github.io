@@ -12,7 +12,7 @@
 
 <body class="form__program">
 	<svg display="none">
-		<symbol id="logo__title" x="0px" y="0px" viewBox="0 0 100.5 18.1" focusable="false" aria-hidden="true">
+		<symbol id="logo__title" viewBox="0 0 100.5 18.1" focusable="false" aria-hidden="true">
 			<g>
 				<path d="M1.2,16.6c-0.8-1-1.2-2.5-1.2-4.4V5.9c0-1.9,0.4-3.4,1.2-4.4C2,0.5,3.4,0,5.4,0c1.9,0,3.2,0.4,4,1.3
 c0.8,0.9,1.2,2.1,1.2,3.8v1.5H6.6V4.8c0-0.7-0.1-1.2-0.2-1.6C6.3,2.9,5.9,2.7,5.4,2.7S4.4,2.9,4.3,3.3C4.1,3.7,4,4.2,4,4.9v8.3
@@ -76,6 +76,7 @@ c-0.6,1.5-1.6,2.2-3.2,2.2C82.7,18,81.5,17.5,80.8,16.5z" />
 		<h1 class="form__title">Подбор программы</h1>
 
 		<section class="program-selection">
+			<h2 class="visually-hidden">Форма подбора питания</h2>
 			<form class="form__program-selection" method="post" action="https://echo.htmlacademy.ru/">
 				<div class="container">
 					<p class="program-selection__invitation">Заполните анкету и мы подберем программу питания для вашего
@@ -89,18 +90,15 @@ c-0.6,1.5-1.6,2.2-3.2,2.2C82.7,18,81.5,17.5,80.8,16.5z" />
 								<legend class="visually-hidden">Данные кота</legend>
 								<p class="program-selection__item--text cat-data__item cat-data__item--name">
 									<label for="cat-name">Имя:*</label>
-									<input type="text" id="cat-name" name="cat-name" placeholder="Барсик" required=""
-										autocorrect="off">
+									<input type="text" id="cat-name" name="cat-name" placeholder="Барсик" required="">
 								</p>
 								<p class="program-selection__item--text cat-data__item cat-data__item-weight">
 									<label for="cat-weight">Вес (кг):*</label>
-									<input type="text" id="cat-weight" name="cat-weight" placeholder="7" required=""
-										autocorrect="off">
+									<input type="text" id="cat-weight" name="cat-weight" placeholder="7" required="">
 								</p>
 								<p class="program-selection__item--text cat-data__item cat-data__item-age">
 									<label for="cat-age">Возраст (лет):</label>
-									<input type="text" id="cat-age" name="cat-age" size="10" placeholder="7"
-										autocorrect="off">
+									<input type="text" id="cat-age" name="cat-age" size="10" placeholder="7">
 								</p>
 							</div>
 						</fieldset>
@@ -146,14 +144,14 @@ c-0.6,1.5-1.6,2.2-3.2,2.2C82.7,18,81.5,17.5,80.8,16.5z" />
 							данные <br>(владельца кота)</legend>
 						<div class="program-selection__columns contacts-owner__columns">
 							<p class="program-selection__item--text contacts-owner__item contacts-owner__item--mail">
-								<label for="mail" autocapitalize="off">E-mail:*</label>
+								<label for="email" autocapitalize="off">E-mail:*</label>
 								<input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" size="18"
-									required="" autocorrect="off" autocomplete="email">
+									required="" autocomplete="email">
 							</p>
 							<p class="program-selection__item--text contacts-owner__item contacts-owner__item--phone">
 								<label for="phone" autocapitalize="off">Телефон:*</label>
-								<input type="phone" id="phone" name="phone" placeholder="8 (960) 900-60-90" size="15"
-									required="" autocorrect="off" autocomplete="tel">
+								<input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" size="15"
+									required="" autocomplete="tel">
 							</p>
 						</div>
 					</div>
@@ -317,7 +315,7 @@ c-0.6,1.5-1.6,2.2-3.2,2.2C82.7,18,81.5,17.5,80.8,16.5z" />
 					</div>
 				</div>
 			</div>
-
+		</div>
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
