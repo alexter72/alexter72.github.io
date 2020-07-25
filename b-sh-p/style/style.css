@@ -2419,8 +2419,6 @@ fieldset {
     color: #000;
 
     background-color: #fff;
-    border-right: 1px solid #000;
-    border-left: 1px solid #000;
   }
 
   .site-list__item a[href]:active {
@@ -2430,9 +2428,8 @@ fieldset {
     opacity: 1;
 
     background-color: #fff;
-    border-right: 1px solid #000;
-    border-left: 1px solid #000;
   }
+
   .user-list {
     width: auto;
     max-width: 160px;
