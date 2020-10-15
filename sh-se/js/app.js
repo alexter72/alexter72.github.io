@@ -3866,7 +3866,6 @@ $(function () {
 
 function setNavigation() {
 	let currentPage;
-	console.log(window.location.host);
 	if (window.location.host === "alexter72.github.io") {
 		currentPage = window.location.pathname.split('/')[2];
 	} else {
