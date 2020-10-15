@@ -219,3 +219,19 @@ window.addEventListener("keydown", function (evt) {
 
 	}
 })
+
+function setNavigation() {
+
+	let currentPage = window.location.pathname.split('/')[1];
+
+	if (currentPage === "") return;
+	let items = document.querySelectorAll(".nav__link");
+	for (let i = 0; i < items.length; i++) {
+		if (items[i].getAttribute("href").indexOf(currentPage) !== -1) {
+			items[i].className += "--active";
+		}
+	}
+
+}
+
+setNavigation();

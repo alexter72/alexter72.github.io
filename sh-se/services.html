@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Services</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+
+<body>
+
+	<svg style="display:none">
+		<symbol id="instagram" viewBox="0 0 511 511">
+			<g>
+				<path d="M510.5,150.2c-2.7-46.3-12.3-77.4-41.4-107.3C415.7-8.9,352.5,2,256.4,0C160.2,2,97.3-9.1,43.8,42.9
+				C-8,96.2,2.9,159.5,0.9,255.5c2,96.4-9.2,158.9,42.9,212.6c53.6,52,116.2,40.8,212.5,42.8c69.4,0,78.1-0.3,105.3-1.5
+				c27.2-1.2,45.8-5.6,62-11.9c57.4-23.5,84.5-72.6,86.6-136.8C512.3,339.3,512.4,171.8,510.5,150.2z M464.5,358.9
+				c-2.5,48.6-17.2,78.6-57.3,95.9c-9,3.5-22.6,7.7-47.4,8.8c-27,1.2-35,1.5-103.2,1.5s-76.4-0.3-103.2-1.5c-35.9-2-57.5-8.8-76.8-27.8
+				C57.4,416.1,50.8,395,48.7,359c-1.2-27-1.5-35-1.5-103.2s0.3-76.4,1.5-103.2c2-35.9,8.8-57.6,28-76.8c19.5-19.1,40.8-25.8,76.8-27.8
+				c27-1.2,35-1.5,103.2-1.5c68.3,0,76.4,0.3,103.2,1.5c35.9,2,57.5,8.9,76.8,27.8c19.1,19.6,25.8,40.7,27.9,76.8
+				C466.5,173.8,466.5,337.6,464.5,358.9z" />
+				<path d="M256.4,124.3c-72.5,0-131.3,58.8-131.3,131.3c7,174.1,255.6,174.1,262.5,0C387.7,183.1,328.9,124.3,256.4,124.3z
+				 M256.4,340.7c-47,0-85.2-38.1-85.2-85.2c4.5-112.9,165.8-112.9,170.3,0C341.6,302.6,303.5,340.7,256.4,340.7z" />
+				<path
+					d="M423.6,119.1c0,16.9-13.7,30.6-30.6,30.6c-40.7-1.6-40.6-59.7,0-61.3C409.8,88.4,423.6,102.2,423.6,119.1z" />
+			</g>
+		</symbol>
+	
+		<symbol id="facebook" viewBox="0 0 512 512">
+			<g>
+				<path d="M437,0H75C33.6,0,0,33.6,0,75v362c2.2,110,158.2,67,226,75V331h-60v-90h60C216.6,86.4,274.8,86.6,407,90v90h-91v61h91
+				l-15,90h-76v181c64.7-4.3,194.2,26.5,196-75c0,0,0-362,0-362C512,33.6,478.4,0,437,0z" />
+			</g>
+		</symbol>
+	
+		<symbol id="twitter" viewBox="0 0 512 512">
+			<g>
+				<path d="M512,97.2c-19,8.4-39.3,13.9-60.5,16.6c21.8-13,38.4-33.4,46.2-58c-20.3,12.1-42.7,20.6-66.6,25.4
+					c-70.6-77.9-204.1-7-179.1,95.7c-87.3-4.3-164.5-46.1-216.4-109.8C7.1,112.5,23.5,180,67.9,207.4c-16.9-0.3-33.4-5.2-47.4-12.9
+					c-0.6,51.4,36,94.5,84.1,104.3c-14.6,3.9-32.2,4.7-47.4,1.7c13.6,41.6,52.2,72.1,98.1,73.1C114,406.5,55.6,423.9,0,416.9
+					c213.3,141.4,480.4-50.7,459.4-265.2C480.2,137,497.7,118.5,512,97.2z" />
+			</g>
+		</symbol>
+	
+		<symbol id="close" viewBox="0 0 512 512">
+			<g>
+				<path d="M284.3,256L506.1,34.1c7.8-7.8,7.8-20.5,0-28.3c-7.8-7.8-20.5-7.8-28.3,0L256,227.7L34.1,5.9C26.3-2,13.7-2,5.9,5.9
+					s-7.8,20.5,0,28.3L227.7,256L5.9,477.9c-7.8,7.8-7.8,20.5,0,28.3c7.8,7.8,20.5,7.8,28.3,0c0,0,221.9-221.9,221.9-221.9
+					l221.9,221.9c7.8,7.8,20.5,7.8,28.3,0c7.8-7.8,7.8-20.5,0-28.3L284.3,256z" />
+			</g>
+		</symbol>
+	
+		<symbol id="layers" viewBox="0 0 512.6 512">
+			<g>
+				<path d="M512.6,256c0-5.2-2.7-10-7.1-12.7l-52-32.1l52.1-32.4c4.4-2.7,7.1-7.5,7.1-12.7c0-5.2-2.7-10-7-12.7l-241-151
+					c-4.9-3.1-11.1-3.1-15.9,0l-241,151c-4.4,2.7-7,7.6-7,12.7c0,5.2,2.7,10,7.1,12.7l51.7,32.2c-79.3,49-79.2,41.2,0,90
+					c0,0-51.8,32.3-51.8,32.3c-4.4,2.7-7,7.5-7.1,12.7s2.7,10,7,12.7c0,0,241,151,241,151c4.9,3.1,11.1,3.1,15.9,0
+					c0,0,241-151,241-151c4.4-2.8,7.1-7.6,7-12.8c0-5.2-2.7-10-7.1-12.7c0,0-52-32.1-52-32.1l52.1-32.4
+					C509.9,266,512.6,261.2,512.6,256z M43.9,166L256.6,32.7L469.3,166c-2,1.3-206.6,128.6-212.7,132.4L43.9,166z M469.2,346.1
+					L256.6,479.3L43.9,346l43.9-27.4l160.9,100.1c2.4,1.5,5.2,2.3,7.9,2.3s5.5-0.8,7.9-2.3L425,318.9L469.2,346.1z M256.6,388.3
+					L44,256l43.8-27.4l160.9,100.1c2.4,1.5,5.2,2.3,7.9,2.3s5.5-0.8,7.9-2.3L425,228.9l44.1,27.2C467.9,256.8,262.2,384.8,256.6,388.3
+					z" />
+			</g>
+		</symbol>
+	
+		<symbol id="devices" viewBox="0 0 457.7 457.7">
+			<g>
+				<path d="M439.5,167.1V55.8c0-17.8-14.5-32.3-32.3-32.3H32.3C14.5,23.5,0,38,0,55.8v226.6c0,17.8,14.5,32.3,32.3,32.3h106.2
+				l-12.2,13.1c-6.6,1-25.9-4-25.7,7.5c0,4.1,3.4,7.5,7.5,7.5h104.4c0,0,0,72.3,0,72.3c0,10.4,8.5,19,19,19h80.6
+				c20-1.1,19.6-18.9,19-34.2H432c14.2,0,25.7-11.5,25.7-25.7V191.7C457.7,180.1,450,170.3,439.5,167.1L439.5,167.1z M442.7,191.7v2
+				H270.2c-0.8-6.6,3.9-12.8,10.7-12.7c0,0,151.1,0,151.1,0C437.9,181,442.7,185.8,442.7,191.7z M312.1,255h-41.9v-46.3h172.5v148.5
+				H331.1V274C331.1,263.5,322.5,255,312.1,255L312.1,255z M316.1,283.8h-88.5c0.7-3.4-2.3-14,4-13.8c0,0,80.6,0,80.6,0
+				C318.2,269.8,315.5,280.4,316.1,283.8L316.1,283.8z M424.5,63.3V166H280.9c-14.2,0-25.7,11.5-25.7,25.7V255
+				c-16,0.3-41.8-4.6-42.7,18.9H15V63.3L424.5,63.3L424.5,63.3z M227.5,298.8H316v91.5h-88.5V298.8z M32.3,38.5h374.9
+				c6.9,0,12.8,4,15.6,9.8h-406C19.5,42.5,25.4,38.5,32.3,38.5L32.3,38.5z M16.3,289h196.2v10.8H32.3C25.1,299.8,18.8,295.3,16.3,289z
+				 M146.9,327.9l12.2-13.1h53.5v13.1H146.9z M312.1,419.1h-80.6c-6.1,0.2-3.4-10.4-4-13.8H316C315.5,408.8,318.2,419.3,312.1,419.1z
+				 M432,385H331v-12.8h111.6C443.5,378.8,438.8,385,432,385z" />
+			</g>
+		</symbol>
+	
+		<symbol id="linkedin" viewBox="0 0 438.6 438.6">
+			<g>
+				<path d="M414.4,24.1C398.4,8.1,379,0,356.3,0H82.2C38.1-1.1-1.1,38.1,0,82.2c0,0,0,274.1,0,274.1c-1.1,44.2,38,83.4,82.2,82.2
+					c0,0,274.1,0,274.1,0c44.2,1.1,83.3-38,82.2-82.2c0,0,0-274.1,0-274.1C438.6,59.6,430.5,40.2,414.4,24.1z M133.6,367.2h-66V169h66
+					L133.6,367.2L133.6,367.2z M127.6,132.4c-12.6,13-41.1,13.4-53.8,0c-13.6-12.4-13.6-36.8,0.3-49c12.7-12.8,41-13.1,53.5,0
+					C141,95.7,141.5,120,127.6,132.4z M370.9,367.2h-66c0,0,0-105.9,0-105.9c2.4-39.6-27.6-55.8-54.2-37.8c-10.6,9.2-15.2,17.3-14.8,33
+					c0,0,0,110.8,0,110.8h-66c0.6-119.5,0.6-185.6,0-198.1h66v28c22.7-40.5,85.4-42.6,114.2-10C383.5,217,367.3,325.1,370.9,367.2
+					L370.9,367.2L370.9,367.2z" />
+			</g>
+		</symbol>
+	</svg>
+	<div class="page">
+
+		<!--header-->
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="row">
+						<div class="header__logo logo col-12 col-lg-4">
+							<a class="logo__link" href="index.html">
+								<span class="logo__prefix">Web</span>Development
+							</a>
+						</div>
+						<ul class="nav__list col-12 col-lg-6">
+							<li class="nav__item">
+								<a class="nav__link" href="index.html">Главная</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="services.html">Услуги</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="portfolio.html">Портфолио</a>
+							</li>
+						</ul>
+						<div class="lang col-12 col-lg-2">
+							<div class="lang__list">
+								<a href="#" class="lang__item lang__item--active">Ru</a>
+								<a href="#" class="lang__item">En</a>
+							</div>
+						</div>
+					</div><!-- /.header__row -->
+				</div> <!-- /.header__inner -->
+			</div><!-- /.container -->
+		</header>
+		<!--content-->
+		<div class="content">
+			<div class="container">
+				<h1 class="content__title">Услуги</h1>
+				<section class="services">
+					<ul class="services__list row">
+						<li class="services__item col-lg-5">
+							<svg class="services__icon">
+								<use xlink:href="#layers"></use>
+							</svg>
+							<div class="services__title">Вёрстка</div>
+							<div class="services__text">Разработка сайтов</div>
+						</li>
+						<li class="services__item col-lg-5">
+							<svg class="services__icon">
+								<use xlink:href="#devices"></use>
+							</svg>
+							<div class="services__title">Front-end</div>
+							<div class="services__text">Интерфейс сайтов</div>
+						</li>
+					</ul>
+			
+					<a href=" #" class="button button--pink" data-toggle="modal" data-target="#requestModal">Оставить
+						заявку</a>
+				</section>
+			</div>
+		</div>
+
+		<!--footer-->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__social social">
+						<div class="social__text">Мои соц. сети</div>
+						<a class="social__link" href="https://www.instagram.com/tereshin_aleks/?hl=ru" target="_blank">
+							<svg class="social__icon social__icon--insta">
+								<use xlink:href="#instagram"></use>
+							</svg>
+						</a>
+						<a class="social__link" href="https://www.facebook.com/tereshinaleks/" target="_blank">
+							<svg class="social__icon social__icon--fb">
+								<use xlink:href="#facebook"></use>
+							</svg>
+						</a>
+						<a class="social__link"
+							href="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D1%82%D0%B5%D1%80%D0%B5%D1%88%D0%B8%D0%BD-b81b9b128/"
+							target="_blank">
+							<svg class="social__icon social__icon--in">
+								<use xlink:href="#linkedin"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="footer__logo circle__logo logo">
+						<a class="logo__link" href="index.html">
+							<span class="logo__prefix">Web</span>Development
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+					<svg class="modal__close-icon">
+						<use xlink:href="#close"></use>
+					</svg>
+				</button>
+				<div class="modal__title">Оставьте заявку</div>
+				<div class="modal__text">Заполните форму ниже и я свяжусь с Вами в самое ближайшее время</div>
+	
+				<form class="form" action="https://echo.htmlacademy.ru/" method="post">
+					<div class="form__group">
+						<input class="input" type="text" placeholder="Ваше имя">
+					</div>
+					<div class="form__group">
+						<input class="input" type="email" placeholder="Ваш е-мэйл">
+					</div>
+					<div class="form__group">
+						<input class="input" type="tel" placeholder="Ваш телефон">
+					</div>
+					<div class="row">
+						<div class="col-lg-6">
+							<button class="button button--pink" type="submit">Оставить заявку</button>
+						</div>
+						<div class="col-lg-6">
+							<ul class="contacts__list contacts__list--modal">
+								<li class="contacts__item">
+									<a class="contacts__link" href="tel:0506557016">0506557016</a>
+								</li>
+								<li class="contacts__item">
+									<a class="contacts__link"
+										href="mailto:tereshinaleks@gmail.com">tereshinaleks@gmail.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--/.modal-content-->
+		</div>
+		<!--/.modal-dialog-->
+	</div>
+	<!--/.modal-->
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
