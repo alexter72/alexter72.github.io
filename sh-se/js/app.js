@@ -3865,8 +3865,16 @@ $(function () {
 });
 
 function setNavigation() {
+	let currentPage;
+	if (window.location.host === "alexter72.github.io") {
+		currentPage = window.location.pathname.split('/');
+	} else {
+		currentPage = window.location.pathname.split('/')[1];
+	}
 
-	let currentPage = window.location.pathname.split('/')[1];
+	// [1] - для компьютерного сервера
+	// [2] - для githubpages
+
 
 	if (currentPage === "") return;
 	let items = document.querySelectorAll(".nav__link");
