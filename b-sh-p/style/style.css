@@ -1504,6 +1504,51 @@ fieldset {
   }
 }
 
+.button-return {
+  position: fixed;
+  top: 80vh;
+  right: 3%;
+
+  padding: 0;
+  width: 40px;
+  height: 40px;
+
+  background-color: rgba(14, 185, 14, 0.3);
+  border: none;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.button-return:hover,
+.button-return:focus,
+.button-return:active {
+  background-color: rgba(14, 185, 14, 1);
+}
+
+.button-return::before,
+.button-return::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+
+  height: 3px;
+  width: 18px;
+  background-color: #fff;
+}
+
+.button-return::before {
+  left: 6px;
+
+  transform: rotate(135deg);
+}
+
+.button-return::after {
+  left: 18px;
+
+  transform: rotate(45deg);
+}
+
 @media (max-width: 768px) {
   .main-nav--closed .site-list__item {
     display: none;
@@ -2317,6 +2362,9 @@ fieldset {
   .sign-up__additional-services .filter-option label {
     line-height: 30px;
   }
+  .button-return {
+    right: 8%;
+  }
 }
 /* 1200px */
 
@@ -2807,5 +2855,9 @@ fieldset {
 
   .page-footer__copyright {
     order: 3;
+  }
+
+  .button-return {
+    right: calc(50% - 480px);
   }
 }
