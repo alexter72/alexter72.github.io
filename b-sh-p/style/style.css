@@ -1508,6 +1508,7 @@ fieldset {
   position: fixed;
   top: 80vh;
   right: 3%;
+  z-index: 100;
 
   padding: 0;
   width: 40px;
