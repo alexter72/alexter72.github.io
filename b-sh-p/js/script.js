@@ -48,7 +48,7 @@ $(function () {
 		mobileFirst: true,
 		arrows: false,
 		dots: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 2000,
 		responsive: [
 			{
@@ -75,7 +75,7 @@ $(function () {
 		mobileFirst: true,
 		arrows: false,
 		dots: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 2000,
 		responsive: [
 			{
