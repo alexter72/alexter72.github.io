@@ -771,29 +771,21 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
 }
 
-.copyright__link {
-  display: flex;
-  justify-content: center;
-  width: 94%;
-  margin: 0 auto 25px;
+.logo__link {
+  padding: 5px;
 
-  color: #fff;
+  color: #121212;
   text-decoration: none;
-  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
 
-  border: 1px solid #3e3e3e;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-.copyright__link:hover {
-  border-color: #515151;
-}
-
-.copyright__link:active {
-  color: #808080;
-
-  background-color: #252525;
-
-  border: none;
+.logo__prefix {
+  text-transform: lowercase;
+  color: #fd5151;
 }
 
 /* our_work */
@@ -2197,7 +2189,7 @@ fieldset {
 
   .copyright__text {
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   .copyright__link {

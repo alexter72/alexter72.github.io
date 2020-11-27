@@ -1380,24 +1380,16 @@ fieldset {
   padding-top: 22px;
 }
 
-.page-footer__copyright-title {
-  margin: 0;
-
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #444;
-}
-
-.page-footer__copyright-title a {
+.logo__link {
+  color: #121212;
   text-decoration: none;
-  color: #444;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
-.page-footer__copyright-title span {
-  margin-left: 6px;
-
-  text-transform: capitalize;
+.logo__prefix {
+  text-transform: lowercase;
+  color: #fd5151;
 }
 
 .page-footer__copyright-image svg path {
@@ -1876,11 +1868,11 @@ fieldset {
 
   .living-example__image {
     position: absolute;
-    top: -170px;
+    top: -200px;
     left: 50%;
 
     width: 677px;
-    height: 499px;
+    height: auto;
     margin-bottom: 0;
     margin-left: -360px;
   }
@@ -2407,7 +2399,7 @@ fieldset {
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1440px) {
   .container {
     padding: 0;
   }
@@ -2580,19 +2572,20 @@ fieldset {
     max-width: 1220px;
     margin: 0 auto;
     margin-top: 150px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 0;
   }
 
   .living-example__wrapper {
     display: flex;
     justify-content: space-between;
+
+    background: #f2f2f2;
   }
 
   .living-example__element-first {
     width: 40%;
     margin: 0;
-    padding: 0;
+    padding: 120px 0 70px;
   }
 
   .living-example__title {
@@ -2642,20 +2635,26 @@ fieldset {
 
     width: 50%;
     min-height: auto;
+    padding: 120px 0 70px;
 
-    background: none;
+    background: linear-gradient(to right, #f2f2f2 50%, #e8e8e8 50%);
   }
 
   .living-example__image {
-    top: -190px;
-    left: 75%;
+    position: static;
 
-    margin-left: -389px;
+    margin: 0;
+
+    margin-left: -84px;
+    margin-top: -325px;
+    margin-bottom: 75px;
   }
 
   .living-example__slider {
-    bottom: 70px;
-    left: 75%;
+    position: static;
+
+    margin: 0;
+    /* margin-left: 0px; */
   }
 
   /* ------------------ */
