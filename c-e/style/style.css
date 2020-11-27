@@ -1374,7 +1374,7 @@ fieldset {
 
 .page-footer__copyright {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   padding-top: 22px;
