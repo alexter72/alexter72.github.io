@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bitcard</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+
+<body>
+
+	<svg style="display:none">
+		<symbol id="arrow-turn" viewBox="0 0 21.9 12.9">
+			<g fill="#fff">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11,0C5.7,0,0,1.8,0,5.1c0,2.9,4.4,4.7,9,5l-1.3,1.3l1.4,1.5l3.6-3.7L9.1,5.5
+						L7.7,7l1,1.1c-4.2-0.4-6.8-1.9-6.8-3c0-1.3,3.5-3.1,9-3.1s9,1.8,9,3.1c0,0.8-1.7,2.2-5.5,2.8l0.3,2c4.5-0.7,7.2-2.6,7.2-4.8
+						C22,1.8,16.3,0,11,0z" />
+			</g>
+		</symbol>
+	
+		<symbol id="burger" viewBox="0 0 20 15">
+			<g fill="#ffffff">
+				<rect y="12" width="15" height="3" />
+				<rect y="6" width="20" height="3" />
+				<rect width="20" height="3" />
+			</g>
+		</symbol>
+	
+		<symbol id="shape-stars" viewBox="0 0 50.4 12.4">
+			<g>
+				<path d="M7.2,0h-2C4.7,2.6,2.6,4.7,0,5.2v2c2.6,0.5,4.7,2.6,5.2,5.2h2c0.5-2.6,2.6-4.7,5.2-5.2v-2C9.8,4.6,7.7,2.6,7.2,0z
+			M6.2,9.3C5.4,8,4.3,6.9,3,6.1c1.3-0.8,2.4-1.9,3.2-3.2C7,4.2,8.1,5.3,9.4,6.1C8.1,6.9,7,8,6.2,9.3z" />
+				<path
+					d="M26.2,0h-2c-0.5,2.6-2.6,4.7-5.2,5.2v2c2.6,0.5,4.7,2.6,5.2,5.2h2c0.5-2.6,2.6-4.7,5.2-5.2v-2C28.8,4.6,26.7,2.6,26.2,0z" />
+				<path d="M45.2,0h-2c-0.5,2.6-2.6,4.7-5.2,5.2v2c2.6,0.5,4.7,2.6,5.2,5.2h2c0.5-2.6,2.6-4.7,5.2-5.2v-2C47.8,4.6,45.7,2.6,45.2,0z
+					 M44.2,9.3C43.4,8,42.3,6.9,41,6.1c1.3-0.8,2.4-1.9,3.2-3.2c0.8,1.3,1.9,2.4,3.2,3.2C46.1,6.9,45,8,44.2,9.3z" />
+			</g>
+		</symbol>
+	
+		<symbol id="arrow-down" viewBox="0 0 13 26">
+			<g>
+				<polygon points="11.6,18.1 7.5,22.2 7.5,0 5.5,0 5.5,22.2 1.5,18.1 0,19.6 6.5,26 13,19.6" />
+			</g>
+		</symbol>
+	</svg>
+	<!--header-->
+	<header class="page-header">
+		<nav class="main-nav main-nav--closed main-nav--no-js">
+			<div class="main-nav__wrapper">
+				<div class="container">
+	
+					<div class="main-nav__columns">
+	
+						<div class="main-nav__logo logo">
+							<a href="index.html" class="logo__link">
+								<img class="logo__image" src="img/logo.png" alt="Логотип Bitcard">
+							</a>
+						</div>
+	
+						<button class="main-nav__toggle" type="button">
+							<svg class="burger__icon" width="20" height="15">
+								<use xlink:href="#burger"></use>
+							</svg>
+							<span class="visually-hidden">Открыть меню</span>
+						</button>
+	
+						<div class="site-list__wrapper">
+							<button class="button-close" type="button">
+								<span class="visually-hidden">Закрыть окно</span>
+							</button>
+	
+							<ul class="main-nav__list site-list">
+								<li class="site-list__item site-list__item--active"><a class="site-list__link"
+										href="#">Home</a></li>
+								<li class="site-list__item"><a class="site-list__link" href="#">How it works</a></li>
+								<li class="site-list__item"><a class="site-list__link" href="#">FAQ</a></li>
+								<li class="site-list__item"><a class="site-list__link" href="#">Where can I buy?</a></li>
+								<li class="site-list__item"><a class="site-list__link" href="#">Become a dealer</a></li>
+								<li class="site-list__item"><a class="site-list__link" href="#">Contacts</a></li>
+								<li class="site-list__item"><a class="site-list__link" href="#">Front-end</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+	<main>
+		<section class="intro">
+			<div class="container">
+				<h1 class="site-title">Покупка карт Bitcoin</h1>
+				<h2 class="visually-hidden">Виды предлагаемых карт обмена на Bitcoin</h2>
+				<ul class="bitcard__list">
+					<li class="bitcard__item">
+						<div class="bitcard__wrapper">
+							<div class="bitcard__turn arrow-turn__icon">
+								<svg class="arrow-turn__circles" viewBox="0 0 60 60" width="60" height="60">
+									<circle r="16" cx="30" cy="30" fill="rgb(237, 193, 30)">
+									</circle>
+									<circle r="22" cx="30" cy="30" fill="rgb(237, 193, 30)" fill-opacity="0.5">
+									</circle>
+									<circle r="30" cx="30" cy="30" fill="rgb(237, 193, 30)" fill-opacity="0.3">
+									</circle>
+								</svg>
+								<svg class="arrow-turn__image" width="21.9" height="12.9">
+									<use xlink:href="#arrow-turn"></use>
+								</svg>
+							</div>
+							<img class="bitcard__image" src="img/card_1.png" alt="Изображение карты стоимостью 500 UAH">
+							<img class="bitcard__image--reverse" src="img/card_1_reverse.png"
+								alt="Оборот карты стоимостью 500 UAH">
+						</div>
+						<p class="bitcard__price">500 UAH<span> = 7500 BTC</span></p>
+					</li>
+					<li class="bitcard__item">
+						<div class="bitcard__wrapper">
+							<div class="bitcard__turn arrow-turn__icon">
+								<svg class="arrow-turn__circles" viewBox="0 0 60 60" width="60" height="60">
+									<circle r="16" cx="30" cy="30" fill="rgb(237, 193, 30)">
+									</circle>
+									<circle r="22" cx="30" cy="30" fill="rgb(237, 193, 30)" fill-opacity="0.5">
+									</circle>
+									<circle r="30" cx="30" cy="30" fill="rgb(237, 193, 30)" fill-opacity="0.3">
+									</circle>
+								</svg>
+								<svg class="arrow-turn__image" width="21.9" height="12.9">
+									<use xlink:href="#arrow-turn"></use>
+								</svg>
+							</div>
+							<img class="bitcard__image" src="img/card_2.png" alt="Изображение карты стоимостью 1500 UAH">
+							<img class="bitcard__image--reverse" src="img/card_2_reverse.png"
+								alt="Оборот карты стоимостью 1500 UAH">
+						</div>
+						<p class="bitcard__price">1500
+							UAH<span> = 22500 BTC</span></p>
+					</li>
+					<li class="bitcard__item">
+						<div class="bitcard__wrapper">
+							<div class="bitcard__turn arrow-turn__icon">
+								<svg class="arrow-turn__circles" viewBox="0 0 60 60" width="60" height="60">
+									<circle r="16" cx="30" cy="30" fill="rgb(237, 193, 30)">
+									</circle>
+									<circle r="22" cx="30" cy="30" fill="rgb(237, 193, 30)" fill-opacity="0.5">
+									</circle>
+									<circle r="30" cx="30" cy="30" fill="rgb(237, 193, 30)" fill-opacity="0.3">
+									</circle>
+								</svg>
+								<svg class="arrow-turn__image" width="21.9" height="12.9">
+									<use xlink:href="#arrow-turn"></use>
+								</svg>
+							</div>
+							<img class="bitcard__image" src="img/card_3.png" alt="Изображение карты стоимостью 3000 UAH">
+							<img class="bitcard__image--reverse" src="img/card_3_reverse.png"
+								alt="Оборот карты стоимостью 3000 UAH">
+						</div>
+						<p class="bitcard__price">3000 UAH<span> = 45000 BTC</span></p>
+					</li>
+				</ul>
+	
+				<button class="button button__use-code" type="button">Использовать код</button>
+	
+			</div>
+		</section>
+	
+		<section class="load-up">
+			<div class="container">
+				<div class="shape-stars">
+					<svg class="shape-stars__image" width="50.4" height="12.4">
+						<use xlink:href="#shape-stars"></use>
+					</svg>
+				</div>
+				<h2 class="load-up__title section__title">Load up here</h2>
+				<p class="load-up__text">All their equipment and instruments are alive. All their equipment and instruments
+					are alive.All their equipment and instruments are alive.</p>
+	
+				<form class="form__load-up" method="POST" action="https://echo.htmlacademy.ru/">
+					<div class="load-up-item__wrapper">
+						<p class="load-up__item load-up__item +--code-activation">
+							<label class="code-activation" for="code-activation">Код активации</label>
+							<input type="text" id="code-activation" name="code-activation" placeholder="Код активации"
+								required>
+						</p>
+						<p class="load-up__item load-up__item--wallet-adress">
+							<label for="wallet-adress">Адрес Bitcoin кошелька</label>
+							<input type="text" id="wallet-adress" name="wallet-adress" placeholder="Адрес Bitcoin кошелька"
+								required>
+						</p>
+						<p class="load-up__item load-up__item--phone">
+							<label for="phone">Ваш номер телефона</label>
+							<input type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required
+								autocomplete="tel">
+						</p>
+					</div>
+					<button class="button button__transfer" type="submit">Перевести</button>
+				</form>
+			</div>
+	
+			<a href="#how-it-works" class="load-up__transition flash-hemisphers">
+				<svg class="flash-hemisphers__image" width="360" height="180" viewBox="0 0 360 180">
+					<circle r="60" cx="50%" cy="100%" fill="rgb(237, 193, 30)">
+					</circle>
+					<circle r="110" cx="50%" cy="100%" fill="rgb(237, 193, 30)" fill-opacity="0.6">
+					</circle>
+					<circle r="140" cx="50%" cy="100%" fill="rgb(237, 193, 30)" fill-opacity="0.4">
+					</circle>
+					<circle r="180" cx="50%" cy="100%" fill="rgb(237, 193, 30)" fill-opacity="0.2">
+					</circle>
+				</svg>
+				<svg class="arrow-down__image" width="13px" height="26px">
+					<use xlink:href="#arrow-down" />
+				</svg>
+			</a>
+	
+	
+		</section>
+	</main>
+
+	<!-- <script src="js/app.min.js"></script> -->
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>
