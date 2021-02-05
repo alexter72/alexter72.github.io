@@ -3,27 +3,34 @@
 /* Document
    ========================================================================== */
 
-html {
-  box-sizing: border-box;
-
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  overflow-y: overlay;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
 /* Sections
    ========================================================================== */
+
+
+/* 
+Remove browsers styles of backgrounds and text in input.
+*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+     box-shadow: 0 0 0 30px #ffffff inset !important;
+
+    -webkit-text-fill-color: #000000 !important;
+}
+
 
 /**
  * Remove the margin in all browsers.
@@ -153,15 +160,9 @@ sup {
 /**
  * Remove the border on images inside links in IE 10.
  */
-/* для img  и svg прописываем vertical align чтобы убрать внизу непонятный отступ в 7 пикселей для родителя картинок. 
-Можно также убрать line-height:0, но тогда нужно его каждому родителю прописывать */
+
 img {
   border-style: none;
-  vertical-align: middle;
-}
-
-svg {
-  vertical-align: middle;
 }
 
 /* Forms
@@ -189,8 +190,7 @@ textarea {
  */
 
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -200,8 +200,7 @@ input {
  */
 
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
