@@ -131,7 +131,7 @@ $div11.addEventListener("touchstart", t11);
 // Task 12 ============================================
 /*  Мини проект. Ознакомьтесь с версткой в задании 12.
 <p>Изучите html код внутри div-12-wrapper.</p>
-<p>1. Добавьте на кнопку nex событие click, touch так, чтобы при событии запускалась функция nextFunction и активным становилось изображение следующее за выделенным классом active-img (рамкой). Соответственно, на активном изображении появляется рамка, а остальные - лишаются рамки.</p>
+<p>1. Добавьте на кнопку next событие click, touch так, чтобы при событии запускалась функция nextFunction и активным становилось изображение следующее за выделенным классом active-img (рамкой). Соответственно, на активном изображении появляется рамка, а остальные - лишаются рамки.</p>
 <p>2. Добавьте на кнопку prev событие click, touch так, чтобы при событии запускалась функция prevFunction и активным становилось изображение до выделенного классом active-img (рамкой). Соответственно, на активном изображении появляется рамка, а остальные - лишаются рамки.</p>
 <p>3. Учтите краевые эффекты - когда мы доходим до конца или начала, то нажатие кнопки должно приводить к перемещению рамки в начало или конец изображений.</p>
 <p>4. Добавьте кнопку reset (функция resetFunction), нажатие которой сбрасывает активное изображение на нулевое. </p>
@@ -141,14 +141,55 @@ $div11.addEventListener("touchstart", t11);
 const images = document.querySelectorAll(".img-12-min");
 let count = 0; // переменная, которая указывает на номер активного изображения в images
 
-const next = document.querySelectorAll(".next");
+const imageMax = document.querySelector(".img-12-max");
+
+const next = document.querySelector(".next");
 next.onclick = nextFunction;
 
-const prev = document.querySelectorAll(".prev");
+const prev = document.querySelector(".prev");
 prev.onclick = prevFunction;
 
-function nextFunction() {}
+const reset = document.querySelector(".reset");
+reset.onclick = resetFunction;
 
-function prevFunction() {}
+function nextFunction(event) {
+  event.preventDefault();
+  console.log(count);
+  if (count < 5) {
+    images[count].classList.remove("active-img");
+    images[count + 1].classList.add("active-img");
+    count++;
+  } else {
+    images[count].classList.remove("active-img");
+    count = 0;
+    images[count].classList.add("active-img");
+  }
 
-// ваше событие здесь!!!
+  imageMax.setAttribute("src", images[count].getAttribute("src"));
+}
+
+function prevFunction(event) {
+  event.preventDefault();
+  console.log(count);
+  if (count > 0) {
+    images[count].classList.remove("active-img");
+    images[count - 1].classList.add("active-img");
+    count--;
+  } else {
+    images[count].classList.remove("active-img");
+    count = images.length - 1;
+    images[count].classList.add("active-img");
+  }
+  imageMax.setAttribute("src", images[count].getAttribute("src"));
+}
+
+function resetFunction(event) {
+  event.preventDefault();
+  images[count].classList.remove("active-img");
+  count = 0;
+  images[count].classList.add("active-img");
+}
+
+next.addEventListener("touchstart", nextFunction);
+prev.addEventListener("touchstart", prevFunction);
+reset.addEventListener("touchstart", resetFunction);

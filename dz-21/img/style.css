@@ -39,3 +39,7 @@ section {
 button {
   background-color: rgb(9, 211, 9);
 }
+
+.reset {
+  background-color: rgb(199, 11, 20);
+}
