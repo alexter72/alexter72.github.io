@@ -188,6 +188,7 @@ function resetFunction(event) {
   images[count].classList.remove("active-img");
   count = 0;
   images[count].classList.add("active-img");
+  imageMax.setAttribute("src", images[0].getAttribute("src"));
 }
 
 next.addEventListener("touchstart", nextFunction);
