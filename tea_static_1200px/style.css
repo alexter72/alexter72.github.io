@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+  }
+  
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color:seashell;
+    text-align: center;
+    text-transform: capitalize;
+
+    background-color: black;
+    opacity:0.9;
+  }
+  
+  a {
+    font-size: 20px;
+    color:seashell;
+    text-align: center;
+
+    background-color: transparent;
+  }
+
+  h2,
+  h4 {
+     margin-bottom: 20px;
+   }
+
+  .header {
+    position: fixed;
+    z-index:5;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 69px;
+    width: 100%;
+
+    padding: 10px;
+
+    border-bottom: 1px solid seashell;
+  }
+  
+  .logo_image {
+    height: 50px;
+  }
+
+  .nav_list {
+    display: flex;
+    
+    list-style: none;
+  }
+
+  .nav_item {
+    margin-right: 20px;
+  }
+
+  .nav_item:last-child {
+    margin-right: 0px;
+  }
+
+  .nav_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: underline;
+  }
+
+  .basis_image {
+    margin-top: 69px;;
+  }
+
+  .our-mission {
+    position: relative;
+
+    margin-bottom: 40px;
+  }
+
+  .our-mission_elements{
+    margin-bottom: 0;
+  }
+  
+  .our-mission_line {
+    position: absolute;
+    top:calc(69px + 350px - 49px);
+    left: calc(50% - 600px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:1200px;
+    padding: 10px;
+
+    background-color: black;
+
+  }
+
+  .tea-of-month_wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .tea-of-month_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    list-style: none;
+  }
+
+  .tea-of-month_item{
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+
+  .tea-of-month_item:nth-child(3n){
+    margin-right:0;
+  }
+ 
+  .locations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg?_gl=1*1k3kojn*_ga*NDgxNTE1Mzk2NS4xNjY2NTI1OTQ0*_ga_3LRZM6TM9L*MTY3MDUwMDQ3OC4xNTUuMS4xNjcwNTAwNzk4LjQ3LjAuMA..');
+  }
+
+  .location_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  .locations_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin-right: 40px;
+
+    line-height: 40px;
+
+    background-color: black;
+  }
+
+  .locations_item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .footer {
+    padding-bottom: 15px;
+  }
+
+  .contacts{
+    min-height:180px;
+  }
+
+  .contacts_email,
+  .contacts_phone {
+    display: block;
+    margin-bottom: 20px;
+    text-transform:lowercase;
+  }
+
+.copyright{
+  margin: 0 20px;
+}
+
+.copyright_author {
+  text-align: left;
+}
+
+.copyright_author span {
+  text-transform: lowercase;
+}

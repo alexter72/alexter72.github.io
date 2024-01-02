@@ -11,6 +11,7 @@ body {
   color: #444;
 
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -44,6 +45,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
 
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .container {
@@ -1455,6 +1457,16 @@ fieldset {
   transform: rotate(45deg);
 }
 
+@media (min-width: 768px) and (max-width: 840px) {
+  .site-list__item {
+    max-width: 125px;
+  }
+
+  .site__title {
+    font-size: 48px;
+  }
+}
+
 @media (max-width: 768px) {
   .main-nav--closed .site-list__item {
     display: none;
@@ -2407,6 +2419,12 @@ fieldset {
 
   .button-return {
     right: 30px;
+  }
+}
+
+@media (min-width: 840px) {
+  .site__title {
+    font-size: 60px;
   }
 }
 
