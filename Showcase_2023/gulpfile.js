@@ -5,7 +5,7 @@ const gulp = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require("gulp-strip-css-comments");
-const del = require("gulp-delete-files");
+const del = require("del");
 const cssnano = require("gulp-cssnano");
 const imagemin = require("gulp-imagemin");
 const plumber = require("gulp-plumber"); //предотвращает поломку задач в случае ошибок
@@ -13,7 +13,7 @@ const rigger = require("gulp-rigger"); // склейка файлов в оди�
 const sass = require("gulp-sass")(require("sass")); //компилирует sass в css
 const uglify = require("gulp-uglify"); // сжатие js-файлов
 const panini = require("panini");
-const browsersync = require("browser-sync").create();
+const browserSync = require("browser-sync").create();
 const rename = require("gulp-rename");
 
 var path = {
@@ -32,23 +32,24 @@ var path = {
   watch: {
     html: "src/**/*.html",
     js: "src/assets/js/**/*.js",
-    css: "src/sass/**/*.scss",
+    css: "src/assets/sass/**/*.scss",
     images: "src/assets/img/**/*.{img,png,svg,gif,ico}",
   },
   clean: "./dist",
 };
 
-function browserSync(done) {
-  browsersync.init({
+function browserSyncInit(done) {
+  browserSync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: "./dist/",
     },
+    notify: false,
     port: 3000,
   });
 }
 
 function browserSyncReload(done) {
-  browsersync.reload();
+  browserSync.reload();
 }
 
 function html() {
@@ -65,19 +66,14 @@ function html() {
       })
     )
     .pipe(dest(path.build.html))
-    .pipe(browsersync.stream());
+    .pipe(browserSync.stream());
 }
 
 function css() {
   return src(path.src.css, { base: "src/assets/sass/" })
     .pipe(plumber())
     .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ["last 8 versions"],
-        cascade: true,
-      })
-    )
+    .pipe(autoprefixer())
     .pipe(cssbeautify())
     .pipe(dest(path.build.css))
     .pipe(
@@ -95,7 +91,8 @@ function css() {
         extname: ".css",
       })
     )
-    .pipe(dest(path.build.css));
+    .pipe(dest(path.build.css))
+    .pipe(browserSync.stream());
 }
 
 function js() {
@@ -110,8 +107,8 @@ function js() {
         extname: ".js",
       })
     )
-    .pipe(dest(path.build.js))
-    .pipe(browsersync.stream());
+    .pipe(browserSync.stream())
+    .pipe(dest(path.build.js));
 }
 
 function images() {
@@ -123,14 +120,14 @@ function clean() {
 }
 
 function watchFiles() {
-  gulp.watch([path.watch.html], html);
-  gulp.watch([path.watch.css], css);
-  gulp.watch([path.watch.js], js);
-  gulp.watch([path.watch.images], images);
+  gulp.watch([path.watch.html], html).on("change", browserSync.reload);
+  gulp.watch([path.watch.css], css).on("change", browserSync.reload);
+  gulp.watch([path.watch.js], js).on("change", browserSync.reload);
+  gulp.watch([path.watch.images], images).on("change", browserSync.reload);
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images));
-const watch = gulp.parallel(build, watchFiles, browserSync);
+const watch = gulp.parallel(build, browserSyncInit, watchFiles);
 
 exports.html = html;
 exports.css = css;
